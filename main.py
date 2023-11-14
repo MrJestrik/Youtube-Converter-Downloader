@@ -206,4 +206,7 @@ class MainWindow(QMainWindow):
 def main_window():
     app = QApplication([])
     window = MainWindow()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main_window()
