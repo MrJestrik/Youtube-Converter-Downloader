@@ -5,8 +5,8 @@ A simple Youtube Downloader and Searcher in 1 app made in python 3.12 built for 
 ### From Source Code
 - download python from https://python.org.
 - `pip install -r requirements.txt`.
-- run youtube.py.
-### From Compiled exe
+- run main.py.
+### From Release
 - Just run the exe.
 
 ## Features
