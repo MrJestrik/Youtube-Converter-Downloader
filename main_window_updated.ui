@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="BG">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>430</width>
+     <height>370</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#BG{border-radius:10px;
+background-color: rgba(97, 75, 195, 255)}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>410</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget {
+	background-color: #333333;
+	border: none;
+}
+QTabBar::tab {
+	background-color: #865DFF;
+	color: #191825;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 8px;
+}
+QTabBar::tab:selected {
+	background-color: #E384FF;
+}
+QTabWidget::pane {
+	background-color: #222222;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="Downloader">
+     <attribute name="title">
+      <string>Downloader</string>
+     </attribute>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>411</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{background-color: rgb(70, 53, 144);}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="MainFrame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>390</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+background-color: rgba(30, 30, 30, 150);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="video_id">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>310</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.517273, x2:1, y2:0.5625, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));</string>
+        </property>
+        <property name="text">
+         <string>video id | ex: ????</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="audio">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>170</y>
+          <width>100</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0);
+border-color: rgba(0, 0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Audio | mp3</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="download">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>150</y>
+          <width>80</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.511364, x2:0.966, y2:0.511364, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));
+border-color: rgba(0, 0, 0, 0);}
+
+QPushButton:hover{color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);}
+QPushButton:pressed{color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);}</string>
+        </property>
+        <property name="text">
+         <string>Download</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="video">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>100</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0, 0);
+border-color: rgba(0, 0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Video | mp4</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="download_folder">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>40</y>
+          <width>310</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.517273, x2:1, y2:0.5625, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));</string>
+        </property>
+        <property name="text">
+         <string>download folder | ex: C:/???</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QProgressBar" name="download_prog">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>70</y>
+          <width>290</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QProgressBar{border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+background-color: rgb(85, 0, 255);
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;}
+
+QProgressBar:chunk{background-color: qlineargradient(spread:pad, x1:0, y1:0.482955, x2:1, y2:0.528409, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(43, 43, 65, 255));
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);}</string>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="format">
+         <string>%p%</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="download_stat">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>100</y>
+          <width>190</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+border-color: rgba(0, 0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Status: None</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="MainTab">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>370</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+background-color: rgb(49, 56, 102);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="MainLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>351</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+border-color: rgba(0, 0, 0, 0)</string>
+        </property>
+        <property name="text">
+         <string>Downloader</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Finder">
+     <attribute name="title">
+      <string>Finder</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>411</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{background-color: rgb(70, 53, 144);}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>390</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{border-radius: 10px;
+background-color: rgba(30, 30, 30, 150);
+border-color: rgba(255, 255, 255, 0);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="video_name">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>10</y>
+          <width>320</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.517273, x2:1, y2:0.5625, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));</string>
+        </property>
+        <property name="text">
+         <string>Video Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="result">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>110</y>
+          <width>60</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border-color: rgba(0, 0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Results: </string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="results">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>110</y>
+          <width>270</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+	border: 2px solid rgb(227, 132, 255);
+	border-radius: 8px;
+	padding: 2px 20px 2px 10px;
+	background-color: rgb(227, 132, 255);
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: right;
+	width: 25px;
+	border-left: 2px solid rgb(227, 132, 255);
+	border-radius: 8px;
+	background-color: rgb(227, 132, 255);
+}
+QComboBox::down-arrow {
+	image: url(:/feather_dark/feather-dark/chevron-down.svg)
+}
+QComboBox QAbstractItemView {
+	background-color: rgb(134, 93, 255);
+	border-radius: 6px;
+}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="copy_video_id">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>320</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.511364, x2:0.966, y2:0.511364, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));
+border-color: rgba(0, 0, 0, 0);}
+
+QPushButton:hover{color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);}
+QPushButton:pressed{color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);}</string>
+        </property>
+        <property name="text">
+         <string>Copy Selected Result Video ID</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="search_video">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>50</y>
+          <width>170</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.511364, x2:0.966, y2:0.511364, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));
+border-color: rgba(0, 0, 0, 0);}
+
+QPushButton:hover{color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);}
+QPushButton:pressed{color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);}</string>
+        </property>
+        <property name="text">
+         <string>Search Video</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="limit_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>40</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border-color: rgba(0, 0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Limit: </string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="limit">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>50</y>
+          <width>80</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0.517273, x2:1, y2:0.5625, stop:0 rgba(49, 56, 102, 255), stop:1 rgba(151, 78, 195, 255));</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="MainTab_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>389</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{border-radius: 10px;
+background-color: rgb(49, 56, 102);
+border-color: rgba(255, 255, 255, 0);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="MainLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>360</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+border-color: rgba(0, 0, 0, 0)</string>
+        </property>
+        <property name="text">
+         <string>Finder</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="TitleBar">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>380</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(49, 56, 102);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="Title">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>310</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;strong&gt;Youtube&lt;/strong&gt; Video/Audio Converter</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Close">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>10</y>
+       <width>30</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{image: url(:/feather_pink/feather-pink/x.svg);}
+QPushButton:hover{image: url(:/feather_purple/feather-purple/x.svg);}
+QPushButton:pressed{image: url(:/feather_dark/feather-dark/x.svg);}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
